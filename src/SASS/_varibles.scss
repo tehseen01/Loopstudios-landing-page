@@ -1,0 +1,19 @@
+$White: hsl(0, 0%, 100%);
+$Black: hsl(0, 0%, 0%);
+$Dark-Gray: hsl(0, 0%, 55%);
+$Very-Dark-Gray: hsl(0, 0%, 41%);
+
+$alata: "Alata", sans-serif;
+$josefin: "Josefin Sans", sans-serif;
+
+@mixin desktop {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+
+@mixin tablets {
+  @media (max-width: 1000px) and (min-width: 800px) {
+    @content;
+  }
+}

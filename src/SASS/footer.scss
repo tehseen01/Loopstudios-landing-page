@@ -1,0 +1,122 @@
+@import "./varibles";
+
+footer {
+  background-color: $Black;
+  padding: 2rem;
+  text-align: center;
+
+  @include desktop() {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 8rem;
+    gap: 2rem;
+  }
+
+  @include tablets() {
+    padding: 2rem 4rem;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+
+    @include desktop() {
+      display: block;
+    }
+
+    img {
+      width: auto;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0;
+
+    @include desktop() {
+      flex-direction: row;
+      padding: 0;
+      gap: 2rem;
+    }
+
+    li {
+      a {
+        color: $White;
+        font-family: $alata;
+        font-size: 1.2em;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: -0.3rem;
+          display: flex;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0.15rem;
+          border-radius: 5px;
+          background-color: $White;
+          transition: all 0.2s ease-in-out;
+        }
+
+        &:hover {
+          &:after {
+            width: 2.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    @include desktop() {
+      grid-area: 1/2;
+      justify-self: end;
+    }
+
+    a {
+      color: $White;
+      font-size: 2em;
+      cursor: pointer;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -0.3rem;
+        left: 0;
+        width: 0;
+        height: 0.15rem;
+        border-radius: 5px;
+        background-color: $White;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        &:after {
+          width: 1.8rem;
+        }
+      }
+    }
+  }
+
+  p {
+    color: $Dark-Gray;
+    font-family: $alata;
+    padding: 1rem 0;
+
+    @include desktop() {
+      text-align: end;
+      padding: 0;
+    }
+  }
+}

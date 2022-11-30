@@ -1,0 +1,39 @@
+@import "./varibles";
+
+main {
+  position: relative;
+
+  picture {
+    z-index: -1;
+  }
+
+  h1 {
+    margin: 0 1rem;
+    border: 1px solid $White;
+    font-family: $josefin;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 300;
+    color: $White;
+    padding: 1rem;
+    word-break: break-word;
+    position: absolute;
+    top: 10rem;
+    left: 1rem;
+
+    @include desktop() {
+      left: 8rem;
+      top: 12rem;
+      margin: 0;
+      padding: 2rem;
+      width: 45%;
+      font-size: 4.5em;
+    }
+
+    @include tablets() {
+      font-size: 3em;
+      top: 9rem;
+      width: 50%;
+    }
+  }
+}
